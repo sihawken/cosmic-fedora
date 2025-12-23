@@ -44,7 +44,6 @@ dnf5 -y copr enable ublue-os/akmods
 
 DRIVERS=(
     "kvmfr"
-    "xone"
     "openrazer"
     "v4l2loopback"
     "wl"
@@ -67,16 +66,17 @@ for ITEM in "${DRIVERS[@]}"; do
         set -e
 done
 
-CC=clang LD=ld.lld LLVM=1 KCFLAGS="-Wno-error -Wno-sometimes-uninitialized" KCFLAGS="-Wno-sometimes-uninitialized" akmods --force --kernels "${KERNEL}"
-
-# Print log for failed build
-cat /var/cache/akmods/xone/1000.0.0.git.1114.82438c9a-1-for-6.18.2-cachyos1.lto.fc43.x86_64.failed.log
-
 dnf5 -y copr disable ublue-os/akmods
+
+#### SENTRY-XONE
+
+dnf5 -y copr enable sentry/xone
+dnf5 -y install xone akmod-xone
+dnf5 -y copr disable sentry/xone
 
 #### KERNEL MODIFICATION FINAL
 
-# Regen initramfs
+CC=clang LD=ld.lld LLVM=1 KCFLAGS="-Wno-error -Wno-sometimes-uninitialized" akmods --force --kernels "${KERNEL}"
 depmod -a ${KERNEL}
 export DRACUT_NO_XATTR=1
 /usr/bin/dracut --no-hostonly --kver "${KERNEL}" --reproducible -v --add ostree -f "/lib/modules/${KERNEL}/initramfs.img"
