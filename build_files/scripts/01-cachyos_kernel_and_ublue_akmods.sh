@@ -67,7 +67,7 @@ for ITEM in "${DRIVERS[@]}"; do
         set -e
 done
 
-akmods --force --kernels "${KERNEL}" -v
+CC=clang LD=ld.lld LLVM=1 akmods --force --kernels "${KERNEL}" -v
 
 dnf5 -y copr disable ublue-os/akmods
 
