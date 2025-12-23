@@ -3,7 +3,9 @@
 set -ouex pipefail
 
 dnf5 -y install \
-    zsh starship util-linux-user
+    zsh util-linux-user
+
+curl -sS https://starship.rs/install.sh | sh -s -- --yes --dest /usr/bin
 
 # 1. Create the system-wide Zsh configuration
 # This ensures every new user gets the Ultramarine style
