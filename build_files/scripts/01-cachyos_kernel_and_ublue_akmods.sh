@@ -71,7 +71,11 @@ dnf5 -y copr disable ublue-os/akmods
 #### SENTRY-XONE
 
 dnf5 -y copr enable sentry/xone
+
+set +e
 dnf5 -y install xone akmod-xone
+set -e
+
 dnf5 -y copr disable sentry/xone
 
 #### KERNEL MODIFICATION FINAL
