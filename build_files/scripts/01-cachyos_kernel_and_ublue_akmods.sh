@@ -25,15 +25,13 @@ dnf5 -y install \
     kernel-cachyos-lto-core \
     kernel-cachyos-lto-modules \
     kernel-cachyos-lto-devel \
-    kernel-cachyos-lto-devel-matched \
-    kernel-cachyos-lto-nvidia-open --allowerasing
+    kernel-cachyos-lto-devel-matched --allowerasing
 dnf5 versionlock add \
     kernel-cachyos-lto \
     kernel-cachyos-lto-core \
     kernel-cachyos-lto-modules \
     kernel-cachyos-lto-devel \
-    kernel-cachyos-lto-devel-matched \
-    kernel-cachyos-lto-nvidia-open --allowerasing
+    kernel-cachyos-lto-devel-matched --allowerasing
 dnf5 -y copr disable bieszczaders/kernel-cachyos-lto
 
 #### UBLUE-OS AKMODS
