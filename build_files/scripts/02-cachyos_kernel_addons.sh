@@ -9,7 +9,7 @@ dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 # Required to install CachyOS settings
 rm -rf /usr/lib/systemd/coredump.conf
 # Install KSMD and CachyOS-Settings
-dnf5 -y install  --allowerasing
+dnf5 -y install cachyos-settings cachyos-ksm-settings --allowerasing
 
 dnf5 versionlock add cachyos-settings cachyos-ksm-settings
 dnf5 -y copr disable bieszczaders/kernel-cachyos-addons
