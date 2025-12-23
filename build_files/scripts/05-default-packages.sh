@@ -6,8 +6,7 @@ dnf5 -y install \
     libratbag-ratbagd solaar-udev openrgb-udev-rules \
     distrobox flatpak-spawn \
     heif-pixbuf-loader libheif ffmpegthumbnailer \
-    google-noto-sans-cjk-fonts google-noto-sans-balinese-fonts \
-    google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts \
+    google-noto-fonts \
     nano htop tmux fzf just zstd \
     net-tools tcpdump traceroute wireguard-tools \
     nvtop nvme-cli smartmontools lshw powerstat \
