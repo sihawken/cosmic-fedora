@@ -20,8 +20,20 @@ dnf5 -y copr enable bieszczaders/kernel-cachyos-lto
 dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra 
 rm -rf /lib/modules/* # Remove kernel files that remain
 
-dnf5 -y install kernel-cachyos-lto kernel-cachyos-lto-devel-matched --allowerasing
-dnf5 versionlock add kernel-cachyos-lto kernel-cachyos-lto-devel-matched
+dnf5 -y install \
+    kernel-cachyos-lto \
+    kernel-cachyos-lto-core \
+    kernel-cachyos-lto-modules \
+    kernel-cachyos-lto-devel \
+    kernel-cachyos-lto-devel-matched \
+    kernel-cachyos-lto-nvidia-open --allowerasing
+dnf5 versionlock add \
+    kernel-cachyos-lto \
+    kernel-cachyos-lto-core \
+    kernel-cachyos-lto-modules \
+    kernel-cachyos-lto-devel \
+    kernel-cachyos-lto-devel-matched \
+    kernel-cachyos-lto-nvidia-open --allowerasing
 dnf5 -y copr disable bieszczaders/kernel-cachyos-lto
 
 #### UBLUE-OS AKMODS
