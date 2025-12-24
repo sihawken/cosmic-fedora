@@ -14,6 +14,7 @@ mkdir -p /etc/skel/.zsh
 # 2. Download Ultramarine/Standard Zsh plugins into the system skeleton
 git clone https://github.com/zsh-users/zsh-autosuggestions /etc/skel/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /etc/skel/.zsh/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-history-substring-search.git /etc/skel/.zsh/zsh-history-substring-search
 
 # 3. Create the default .zshrc in /etc/skel
 cat <<EOF > /etc/skel/.zshrc
