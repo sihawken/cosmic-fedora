@@ -13,10 +13,5 @@ dnf5 -y install \
     fuse squashfs-tools symlinks wl-clipboard \
     apr apr-util openssl grub2-tools-extra
 
-# Fonts
-
-dnf5 -y install \
-    mozilla-fira-sans-fonts
-
 dnf5 -y remove firefox firefox-langpacks toolbox
 
