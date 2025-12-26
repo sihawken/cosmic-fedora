@@ -26,7 +26,7 @@ dnf5 -y install libimobiledevice-utils usbmuxd
 dnf5 -y install google-noto-sans-balinese-fonts google-noto-sans-cjk-fonts google-noto-sans-javanese-fonts google-noto-sans-sundanese-fonts
 
 # Category: Graphics, Media & Thumbnails
-dnf5 -y install heif-pixbuf-loader libheif ffmpegthumbnailer fdk-aac libfdk-aac ffmpeg ffmpeg-libs libavcodec mesa-libxatracker
+dnf5 -y install heif-pixbuf-loader libheif ffmpegthumbnailer fdk-aac libfdk-aac ffmpeg ffmpeg-libs libavcodec
 
 # Category: Multimedia Infrastructure & Cameras
 dnf5 -y install libcamera libcamera-gstreamer libcamera-ipa libcamera-tools pipewire-libs-extra pipewire-plugin-libcamera
