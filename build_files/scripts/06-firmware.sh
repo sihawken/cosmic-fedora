@@ -16,13 +16,13 @@ if [ $? -eq 0 ]; then
 
     echo "Decompressing .xz firmware files..."
     # Some kernels require uncompressed files; others handle .xz. This ensures compatibility.
-    find "$TARGET_DIR" -name "*.xz" -exec sudo xz -d {} +
+    find "$TARGET_DIR" -name "*.xz" -exec xz -df {} +
 
     echo "Setting permissions..."
     chown -R root:root "$TARGET_DIR"
     chmod -R 644 "$TARGET_DIR"
     # Directories need +x to be traversable
-    find "$TARGET_DIR" -type d -exec sudo chmod 755 {} +
+    find "$TARGET_DIR" -type d -exec chmod 755 {} +
 
     echo "Cleaning up..."
     rm -rf "$TEMP_DIR"
