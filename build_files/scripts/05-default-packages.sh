@@ -16,7 +16,7 @@ dnf5 -y install \
 # Fonts
 
 dnf5 -y install \
-    mozilla-fira-fonts
+    mozilla-fira-sans-fonts
 
 dnf5 -y remove firefox firefox-langpacks toolbox
 
