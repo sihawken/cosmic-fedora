@@ -3,7 +3,7 @@
 A ublue-os inspired distribution with cosmic de, cachy-os kernel and packages, and additional akmod hardware support. 
 
 > [!WARNING]
-> I built this image for me. Any support requests may go unanswered, however I will happily accept pull requests for any fixes or suggested improvements.
+> I built this image for me. Feel free to install, however any support requests may go unanswered. I will happily accept pull requests for any fixes or suggested improvements.
 
 ## Installation instructions:
 
