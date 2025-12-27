@@ -11,6 +11,7 @@ My system: Framework Laptop 13 (12th Gen Intel)
 
 - Base Image: quay.io/fedora-ostree-desktops/cosmic-atomic:43
 - kernel-cachyos-lto: https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-lto/
+- cachy-os settings and ksm settings: https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/
 - Ublue akmods (hardware support): https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/
 - Non-free multimedia packages
 - A small list of default packages
